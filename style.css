@@ -13,7 +13,11 @@ body {
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative; }
 
 .container {
   width: 1150px;
@@ -31,8 +35,7 @@ body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding-left: 20px;
-  padding-right: 20px;
-  z-index: 3; }
+  padding-right: 20px; }
 
 .text-box {
   display: -webkit-box;
@@ -56,13 +59,22 @@ h1, h2, h3 {
 h1 {
   font-size: 2em;
   color: #FFFFFF;
-  display: block; }
+  word-break: break-all;
+  line-height: 1.3;
+  width: 12em; }
 
 h2 {
-  font-size: 1.2em;
-  padding-bottom: 5px; }
+  font-size: 1.7em;
+  word-break: break-all;
+  line-height: 1.3;
+  width: 12em;
+  padding-bottom: 0.5em; }
 
 h3 {
+  font-size: 1.2em;
+  padding-bottom: 0.3em; }
+
+h4 {
   font-size: 0.9em; }
 
 p {
@@ -116,9 +128,13 @@ nav {
 
 .home {
   height: 640px;
-  background-size: 100%;
-  background-position: center center;
   margin-top: 72px; }
+  .home .container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
   .home .container .text-box {
     width: 63%;
     max-width: 650px;
@@ -126,12 +142,12 @@ nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex; }
-    .home .container .text-box h3 {
+    .home .container .text-box h4 {
       opacity: 0.8;
       color: #FFFFFF; }
 
 #home {
-  background-image: url("app/images/christoffer-engstrom-503481-unsplash.jpg"); }
+  background-image: url("app/images/home.jpg"); }
 
 button {
   width: 135px;
@@ -159,7 +175,8 @@ button {
   align-content: space-between;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center; }
+  justify-content: center;
+  z-index: 10; }
 
 #signup-header {
   -webkit-box-sizing: border-box;
@@ -256,7 +273,6 @@ input:last-of-type {
   display: flex; }
 
 .social {
-  width: 100%;
   height: 105px;
   background-color: #FFFFFF; }
   .social .text-box {
@@ -276,3 +292,49 @@ input:last-of-type {
   opacity: 0.65; }
   .icons svg {
     fill: #e27866; }
+
+.features {
+  width: 100%;
+  height: 500px; }
+
+#features {
+  background-image: url("app/images/features.jpg"); }
+
+.about {
+  height: 500px;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .about .text-box {
+    width: 47%;
+    color: #FFFFFF; }
+
+.logo {
+  width: 47%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.fold {
+  width: 100%;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; }
+
+.fold.dark {
+  background-color: #000000;
+  opacity: 0.63; }
+
+.fold.grad {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#E27866), to(#6696E2));
+  background-image: linear-gradient(to bottom right, #E27866, #6696E2);
+  opacity: 0.42; }
