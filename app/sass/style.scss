@@ -1,0 +1,207 @@
+$black: #1C1C1C;
+$white: #FFFFFF;
+$grey: #F5F5F5;
+$orange: #E27866;
+$green: #41D395;
+
+//Negeros proporcijos layout'o. Peržiūrėti dydžius, kad būtų responsive
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.section {
+    width: 100%;
+    border: solid 1px red;
+    margin: 0 auto;
+    display: flex;
+}
+
+.container {
+    width: 1100px;
+    display: flex;
+    border: solid 1px green;
+    margin: 0 auto;
+}
+
+.text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: space-between;
+    box-sizing: border-box;
+    text-align: left;
+    border: solid 1px blue;
+}
+
+//Negerai su tekstų dydžiais. Perdaryti su em'ais 
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+h1 {
+    //padaryti after'i - linija apacioj
+    font-size: 36px;
+    color: $white;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 14px;
+}
+
+nav {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 72px; //paversti em'ais
+    background-color: $black;
+    .container {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.menu {
+    display: flex;
+    width: 555px;
+    justify-content: flex-end;
+    border: solid 1px yellow;
+    ul {
+        list-style: none;
+        display: block;
+        text-align: right;
+        li {
+            display: inline-block;
+            padding-left: 2.5em;
+        }
+    }
+    a {
+        //padaryti after'į su juosta apačioje ir texto spalva balta
+        color: $grey;
+        text-decoration: none;
+        font-size: 0.8em;
+    }
+}
+
+.home {
+    height: 640px;
+    background-size: 100%;
+    background-position: center center;
+    margin-top: 72px;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .text-box {
+            width: 63%;
+            max-width: 650px;
+            min-height: 425px;
+            h3 {
+                opacity: 0.8;
+                color: $white;
+            }
+        }
+    }
+}
+
+#home {
+    background-image: url('app/images/christoffer-engstrom-503481-unsplash.jpg');
+}
+
+button {
+    // Download - section home
+    width: 135px;
+    height: 42px;
+    color: $white;
+    border: solid 2px $white;
+    background-color: transparent;
+}
+
+.signup {
+    width: 33%;
+    min-height: 425px;
+    background: $white;
+    box-sizing: border-box;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: center;
+}
+
+#signup-header {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 57px;
+    background-color: $grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px 5px 0 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: flex-start;
+    padding: 2em;
+    h3 {
+        color: $black;
+    }
+}
+
+input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8em;
+    background: white;
+    color: #D8D8D8;
+    border: 0;
+    border-bottom: solid 2px #D8D8D8;
+    width: 90%;
+    height: 40px;
+    box-sizing: border-box;
+    outline-color: $orange;
+}
+
+.signup-button {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 57px;
+    background-color: $green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 5px 5px;
+    border: 0;
+    font-size: 18px;
+}
+
+.subscription {
+    font-size: 9px;
+    font-weight: 600;
+    color: $black;
+    display: flex;
+}
+
