@@ -5,6 +5,10 @@ $orange: #E27866;
 $green: #41D395;
 
 //Negeros proporcijos layout'o. Peržiūrėti dydžius, kad būtų responsive
+ * {
+     margin: 0;
+     padding: 0;
+ }
 
 body {
     padding: 0;
@@ -20,17 +24,22 @@ body {
 }
 
 .container {
-    width: 1100px;
+    width: 1150px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     border: solid 1px green;
     margin: 0 auto;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    z-index: 3;
 }
 
 .text-box {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-content: space-between;
+    justify-content: space-between;
     box-sizing: border-box;
     text-align: left;
     border: solid 1px blue;
@@ -44,16 +53,27 @@ h1, h2, h3 {
 
 h1 {
     //padaryti after'i - linija apacioj
-    font-size: 36px;
+    font-size: 2em;
     color: $white;
+    display: block;
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 1.2em;
+    padding-bottom: 5px;
 }
 
 h3 {
-    font-size: 14px;
+    font-size: 0.9em;
+}
+
+p {
+    font-size: 0.7em;
+    padding-bottom: 5px;
+}
+
+svg {
+    .b{fill:#fff}
 }
 
 nav {
@@ -68,15 +88,14 @@ nav {
     background-color: $black;
     .container {
         margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
 .menu {
     display: flex;
-    width: 555px;
+    max-width: 555px;
     justify-content: flex-end;
     border: solid 1px yellow;
     ul {
@@ -86,6 +105,9 @@ nav {
         li {
             display: inline-block;
             padding-left: 2.5em;
+        }
+        li:first-of-type {
+            padding-left: 1em;
         }
     }
     a {
@@ -101,18 +123,15 @@ nav {
     background-size: 100%;
     background-position: center center;
     margin-top: 72px;
-    .container {
+    .container .text-box {
+        width: 63%;
+        max-width: 650px;
+        min-height: 425px;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        .text-box {
-            width: 63%;
-            max-width: 650px;
-            min-height: 425px;
-            h3 {
-                opacity: 0.8;
-                color: $white;
-            }
+
+        h3 {
+            opacity: 0.8;
+            color: $white;
         }
     }
 }
@@ -133,6 +152,7 @@ button {
 .signup {
     width: 33%;
     min-height: 425px;
+    min-width: 250px;
     background: $white;
     box-sizing: border-box;
     border-radius: 5px;
@@ -143,8 +163,9 @@ button {
 }
 
 #signup-header {
+    box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 20px;
     width: 100%;
     height: 57px;
     background-color: $grey;
@@ -172,19 +193,23 @@ input {
     align-content: space-between;
     margin-top: 10px;
     margin-bottom: 10px;
+    padding-left: 10px;
     font-family: 'Montserrat', sans-serif;
     font-size: 0.8em;
     background: white;
     color: #D8D8D8;
     border: 0;
-    border-bottom: solid 2px #D8D8D8;
-    width: 90%;
+    border-bottom: solid 1px #D8D8D8;
+    width: 100%;
     height: 40px;
     box-sizing: border-box;
     outline-color: $orange;
 }
+input:last-of-type {
+    margin-bottom: 20px;
+}
 
-.signup-button {
+.signup-button { //padaryti hover
     margin: 0;
     padding: 0;
     width: 100%;
@@ -195,7 +220,7 @@ input {
     justify-content: center;
     border-radius: 0 0 5px 5px;
     border: 0;
-    font-size: 18px;
+    font-size: 1em;
 }
 
 .subscription {
@@ -204,4 +229,26 @@ input {
     color: $black;
     display: flex;
 }
+
+.social {
+    width: 100%;
+    height: 105px;
+    background-color: $white;
+    .text-box {
+        width: 30%;
+    }
+}
+
+.icons {
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0.65;
+    svg {
+        fill:#e27866;
+    }
+}
+
+
 

@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0; }
+
 body {
   padding: 0;
   margin: 0;
@@ -12,12 +16,23 @@ body {
   display: flex; }
 
 .container {
-  width: 1100px;
+  width: 1150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   border: solid 1px green;
-  margin: 0 auto; }
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
+  z-index: 3; }
 
 .text-box {
   display: -webkit-box;
@@ -27,11 +42,9 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -ms-flex-line-pack: justify;
-  align-content: space-between;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   text-align: left;
@@ -41,14 +54,23 @@ h1, h2, h3 {
   font-weight: 600; }
 
 h1 {
-  font-size: 36px;
-  color: #FFFFFF; }
+  font-size: 2em;
+  color: #FFFFFF;
+  display: block; }
 
 h2 {
-  font-size: 20px; }
+  font-size: 1.2em;
+  padding-bottom: 5px; }
 
 h3 {
-  font-size: 14px; }
+  font-size: 0.9em; }
+
+p {
+  font-size: 0.7em;
+  padding-bottom: 5px; }
+
+svg .b {
+  fill: #fff; }
 
 nav {
   margin: 0 auto;
@@ -66,21 +88,14 @@ nav {
   background-color: #1C1C1C; }
   nav .container {
     margin: 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
+    padding-left: 20px;
+    padding-right: 20px; }
 
 .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 555px;
+  max-width: 555px;
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
@@ -92,6 +107,8 @@ nav {
     .menu ul li {
       display: inline-block;
       padding-left: 2.5em; }
+    .menu ul li:first-of-type {
+      padding-left: 1em; }
   .menu a {
     color: #F5F5F5;
     text-decoration: none;
@@ -102,23 +119,16 @@ nav {
   background-size: 100%;
   background-position: center center;
   margin-top: 72px; }
-  .home .container {
+  .home .container .text-box {
+    width: 63%;
+    max-width: 650px;
+    min-height: 425px;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center; }
-    .home .container .text-box {
-      width: 63%;
-      max-width: 650px;
-      min-height: 425px; }
-      .home .container .text-box h3 {
-        opacity: 0.8;
-        color: #FFFFFF; }
+    display: flex; }
+    .home .container .text-box h3 {
+      opacity: 0.8;
+      color: #FFFFFF; }
 
 #home {
   background-image: url("app/images/christoffer-engstrom-503481-unsplash.jpg"); }
@@ -133,6 +143,7 @@ button {
 .signup {
   width: 33%;
   min-height: 425px;
+  min-width: 250px;
   background: #FFFFFF;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -151,8 +162,10 @@ button {
   justify-content: center; }
 
 #signup-header {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
-  padding: 0;
+  padding: 20px;
   width: 100%;
   height: 57px;
   background-color: #F5F5F5;
@@ -199,17 +212,21 @@ input {
   align-content: space-between;
   margin-top: 10px;
   margin-bottom: 10px;
+  padding-left: 10px;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.8em;
   background: white;
   color: #D8D8D8;
   border: 0;
-  border-bottom: solid 2px #D8D8D8;
-  width: 90%;
+  border-bottom: solid 1px #D8D8D8;
+  width: 100%;
   height: 40px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   outline-color: #E27866; }
+
+input:last-of-type {
+  margin-bottom: 20px; }
 
 .signup-button {
   margin: 0;
@@ -228,7 +245,7 @@ input {
   justify-content: center;
   border-radius: 0 0 5px 5px;
   border: 0;
-  font-size: 18px; }
+  font-size: 1em; }
 
 .subscription {
   font-size: 9px;
@@ -237,3 +254,25 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+
+.social {
+  width: 100%;
+  height: 105px;
+  background-color: #FFFFFF; }
+  .social .text-box {
+    width: 30%; }
+
+.icons {
+  width: 55%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  opacity: 0.65; }
+  .icons svg {
+    fill: #e27866; }
