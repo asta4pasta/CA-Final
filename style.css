@@ -210,7 +210,8 @@ form {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  padding: 2em; }
+  padding: 2em;
+  font-family: 'Montserrat', sans-serif; }
   form h3 {
     color: #1C1C1C; }
 
@@ -242,8 +243,58 @@ input {
   box-sizing: border-box;
   outline-color: #E27866; }
 
-input:last-of-type {
-  margin-bottom: 20px; }
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px; }
+
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label {
+  position: relative;
+  padding-left: 28px;
+  padding-right: 30px;
+  cursor: pointer;
+  line-height: 2.4;
+  display: inline-block;
+  color: #000000; }
+
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #41D395;
+  border-radius: 100%;
+  background: transparent; }
+
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+  content: '';
+  width: 11px;
+  height: 11px;
+  background: #41D395;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+
+[type="radio"]:not(:checked) + label:after {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0); }
+
+[type="radio"]:checked + label:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1); }
+
+[type="tel"] {
+  margin-bottom: 30px; }
 
 .signup-button {
   margin: 0;
@@ -262,15 +313,18 @@ input:last-of-type {
   justify-content: center;
   border-radius: 0 0 5px 5px;
   border: 0;
-  font-size: 1em; }
+  font-size: 1em;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif; }
 
 .subscription {
-  font-size: 9px;
+  font-size: 0.6em;
   font-weight: 600;
   color: #1C1C1C;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 20px; }
 
 .social {
   height: 105px;
