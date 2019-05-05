@@ -1,0 +1,67 @@
+h1, h2, h3, h4, h5 {
+    font-weight: 600;
+}
+
+h1 {
+    //padaryti after'i - linija apacioj
+    font-size: 2em;
+    color: $white;
+    word-break: break-all;
+    line-height: 1.3;
+    width: 12em; //sitas yra eilutes luzio plotis
+    text-align: left;
+    position: relative;
+    margin-bottom: 27px;
+}
+
+h1::after {
+    content: "";
+    background-color: $white;
+    height: 2px;
+    width: 64px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 0.6em;
+    text-align: left;
+}
+
+//   h1::before {
+//     content: '';
+//     position: absolute;
+//     left: 0;
+//     top: 100%;
+//     height: 0;
+//     width: 64px;
+//     border-top: 2px solid white;
+//     visibility: 0;
+//   }
+
+h2 {
+    font-size: 1.7em;
+    word-break: break-all;
+    line-height: 1.3;
+    width: 12em;
+    padding-bottom: 0.5em;
+}
+
+h3 {
+    font-size: 1.2em;
+    padding-bottom: 0.3em;
+}
+
+h4 {
+    font-size: 0.9em;
+}
+
+h5 {
+    font-size: 0.7em;
+}
+
+p {
+    font-size: 0.7em;
+    padding-bottom: 10px;
+}
+
+svg {
+    .b{fill:#fff}
+}

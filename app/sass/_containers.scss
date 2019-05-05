@@ -1,0 +1,73 @@
+.section {
+    width: 100%;
+    border: solid 1px red;
+    margin: 0 auto;
+    display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+}
+
+.container {
+    width: 1150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: solid 1px green;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.flex-vertical {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    text-align: left;
+    border: solid 1px blue;
+}
+
+.wrap {
+    width: 100%;
+    min-height: 200px;
+    border: solid 1px orange;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-box.centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    h1 {
+        word-break: normal;
+        text-transform: uppercase;
+    }
+    h3 {
+        padding-bottom: 1em;
+    }
+}
+
+//Home skiltis - formoje input-"radio" konteineris
+.subscription { 
+    font-size: 0.6em;
+    font-weight: 600;
+    color: $black;
+    display: inline-block;
+    box-sizing: border-box;
+    padding-top: 20px;
+}
