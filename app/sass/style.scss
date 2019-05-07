@@ -11,6 +11,8 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
+    margin: 0 auto;
+    width: 100vw;
 }
 
 //FOOTER'IS
@@ -54,6 +56,12 @@ nav {
         color: $grey;
         text-decoration: none;
         font-size: 0.8em;
+        opacity: 0.69;
+    }
+    a:hover {
+        opacity: 1;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
     }
 }
 
@@ -61,25 +69,32 @@ nav {
 .home {
     height: 640px;
     margin-top: 72px;
-    .container {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-    }
     .container .text-box {
         width: 63%;
         max-width: 650px;
         min-height: 425px;
         display: flex;
-        h1::before {
-            visibility: 1;
+        z-index: 2;
+        h1::after {
+            content: "";
+            margin: 0 0;
+            margin-top: 0.6em;
         }
         h4 {
             opacity: 0.8;
             color: $white;
         }
     }
+}
+
+.home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.63);
 }
 
 #home {
@@ -98,7 +113,7 @@ nav {
     box-sizing: border-box;
     border-radius: 5px;
     display: flex;
-    z-index: 10;
+    z-index: 2;
 }
 
 #signup-header {
@@ -133,7 +148,12 @@ nav {
     align-items: center;
     svg {
         fill:#e27866;
-        opacity: 0.65;
+    }
+    a {
+        opacity: 0.63;
+    }
+    a:hover {
+        opacity: 1;
     }
 }
 
@@ -142,6 +162,17 @@ nav {
 .features {
     width: 100%;
     height: 500px;
+}
+
+.features::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom right, $orange, $blue);
+    opacity: 0.42;
 }
 
 #features {
@@ -157,6 +188,9 @@ nav {
     .text-box {
         width: 47%;
         color: $white;
+        h2::after {
+            opacity: 1;
+        }
         .text-box {
             width: 100%;
             margin-top: 10px;
@@ -179,9 +213,13 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: contain;
+    background-position: center center;
+    padding-bottom: 50px;
 }
-
-@import 'folds'; //iskeltas foldas i _folds
+#about-logo {
+    background-image: url('app/images/cheshire-county-hygiene-services-logo.svg');
+}
 
 //AWSOME skiltis
 .awsome, .reviews {
@@ -282,3 +320,21 @@ nav {
         margin-top: 33px;
     }
 } 
+
+footer {
+    height: 123px;
+    background-color: $black;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p {
+        font-size: 1.1em;
+        color: white;
+        opacity: 0.5;
+        padding-top: 5px;
+    }
+    .icons svg {
+        opacity: 1;
+    }
+}

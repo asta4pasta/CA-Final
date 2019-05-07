@@ -25,23 +25,23 @@ h1::after {
     text-align: left;
 }
 
-//   h1::before {
-//     content: '';
-//     position: absolute;
-//     left: 0;
-//     top: 100%;
-//     height: 0;
-//     width: 64px;
-//     border-top: 2px solid white;
-//     visibility: 0;
-//   }
-
 h2 {
     font-size: 1.7em;
     word-break: break-all;
     line-height: 1.3;
     width: 12em;
     padding-bottom: 0.5em;
+    &:after {
+        content:'';
+        content: "";
+        background-color: $orange;
+        height: 2px;
+        width: 200px;
+        display: block;
+        margin-top: 0.6em;
+        text-align: left;
+        opacity: 0;
+    }
 }
 
 h3 {
