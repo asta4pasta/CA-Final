@@ -1,0 +1,56 @@
+.review-box {
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.speech-bubble {
+    width: 260px;
+    min-height: 50px;
+    background-color: $blue;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+}
+
+.speech-bubble:after {
+    contain: '';
+    position: absolute;
+    top: 110%;
+    left: 20px;
+    box-sizing: border-box;
+    border: 8px solid transparent;
+    border-top: 8px solid $orange;    
+    p {
+        font-size: 0.8em;
+        color: white;
+        line-height: 1.5;
+        padding-bottom: 0;
+    }
+}
+.review-bottom-box {
+    width: 260px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+    p {
+        color: #86878B;
+    }
+}
+
+.circle-image {
+    width: 70px;
+    height: 70px;
+    background-size: cover;
+    background-position: center center;
+    box-sizing: border-box;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+#customer {
+    background-image: url('/app/images/avatar.png');
+}

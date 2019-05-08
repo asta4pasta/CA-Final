@@ -1,6 +1,6 @@
 //Home skiltis - Download buttonas
 
-button {  //padaryti hover
+button {
     width: 135px;
     height: 42px;
     color: white;
@@ -31,6 +31,7 @@ button:hover {
     font-size: 1em;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
+    outline-color: $green;
 }
 
 .signup-button:hover, .send-button:hover {

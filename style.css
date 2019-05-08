@@ -201,7 +201,8 @@ button:hover {
   border: 0;
   font-size: 1em;
   font-weight: 600;
-  font-family: 'Montserrat', sans-serif; }
+  font-family: 'Montserrat', sans-serif;
+  outline-color: #41D395; }
 
 .signup-button:hover, .send-button:hover {
   color: #41D395;
@@ -305,11 +306,11 @@ nav {
         opacity: 1;
         -webkit-transform: translateX(-38%);
         transform: translateX(-38%); }
-    .menu ul li:last-of-type {
-      padding-right: 0; }
-    .menu ul:last-of-type:hover:after {
-      -webkit-transform: translateX(-100%);
-      transform: translateX(-100%); }
+      .menu ul li:last-of-type {
+        padding-right: 0; }
+        .menu ul li:last-of-type:hover:after {
+          -webkit-transform: translateX(-50%);
+          transform: translateX(-50%); }
   .menu a {
     color: white;
     text-decoration: none;
@@ -334,10 +335,14 @@ nav {
     display: -ms-flexbox;
     display: flex;
     z-index: 2; }
+    .home .container .text-box h1 {
+      text-align: left;
+      width: 12em; }
     .home .container .text-box h1::after {
       content: "";
       margin: 0 0;
-      margin-top: 0.6em; }
+      margin-top: 0.6em;
+      background-color: white; }
     .home .container .text-box h4 {
       opacity: 0.8;
       color: #FFFFFF; }
@@ -691,9 +696,9 @@ input {
     font-weight: 300;
     text-transform: capitalize;
     margin-top: 14px;
-    margin-bottom: 21px; }
+    margin-bottom: 15px; }
   .card-top .oversized {
-    font-size: 6em;
+    font-size: 5em;
     position: relative; }
   .card-top .oversized::before {
     content: "$";
@@ -707,7 +712,7 @@ input {
     text-transform: capitalize;
     opacity: 0.5;
     margin-top: 14px;
-    margin-bottom: 19px; }
+    margin-bottom: 15px; }
 
 .card-middle {
   width: 100%;
@@ -740,14 +745,83 @@ input {
 
 .reviews {
   height: 500px; }
-  .reviews .text-box {
-    max-width: 260px; }
-  .reviews h1 {
-    text-align: center;
-    width: 100%; }
-  .reviews h1:after {
-    content: "";
-    background-color: #6696E2; }
+
+h1 {
+  text-align: center;
+  width: 100%; }
+
+h1:after {
+  content: "";
+  background-color: #6696E2; }
+
+.wrap .text-box {
+  max-width: 260px; }
+
+.review-box {
+  width: 260px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.speech-bubble {
+  width: 260px;
+  min-height: 50px;
+  background-color: #6696E2;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 20px;
+  position: relative; }
+
+.speech-bubble:after {
+  contain: '';
+  position: absolute;
+  top: 110%;
+  left: 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 8px solid transparent;
+  border-top: 8px solid #E27866; }
+  .speech-bubble:after p {
+    font-size: 0.8em;
+    color: white;
+    line-height: 1.5;
+    padding-bottom: 0; }
+
+.review-bottom-box {
+  width: 260px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 10px; }
+  .review-bottom-box p {
+    color: #86878B; }
+
+.circle-image {
+  width: 70px;
+  height: 70px;
+  background-size: cover;
+  background-position: center center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 50%;
+  margin-right: 20px; }
+
+#customer {
+  background-image: url("/app/images/avatar.png"); }
 
 .contacts {
   width: 100%;
