@@ -3,10 +3,18 @@
 button {  //padaryti hover
     width: 135px;
     height: 42px;
-    color: $white;
-    border: solid 2px $white;
+    color: white;
+    border: solid 2px white;
     background-color: transparent;
     text-transform: uppercase;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: white;
+    color: $black;
+    transition: 0.2s ease-in-out;
 }
 
 .signup-button { //padaryti hover
@@ -25,10 +33,14 @@ button {  //padaryti hover
     font-family: 'Montserrat', sans-serif;
 }
 
+.signup-button:hover, .send-button:hover {
+    color: $green;
+    border: solid 2px $green;
+}
+
 .send-button { //padaryti hover
     margin: 0 auto;
-    margin-top: 40px;
-    margin-bottom: 33px;
+    margin-top: 30px;
     width: 160px;
     height: 48px;
     background-color: $green;

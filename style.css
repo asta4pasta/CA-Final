@@ -4,8 +4,9 @@
 
 .section {
   width: 100%;
-  border: solid 1px red;
   margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,7 +16,7 @@
   position: relative; }
 
 .container {
-  width: 1150px;
+  width: 1000px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,7 +26,6 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: solid 1px green;
   margin: 0 auto;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -59,13 +59,11 @@
   justify-content: space-between;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  text-align: left;
-  border: solid 1px blue; }
+  text-align: left; }
 
 .wrap {
   width: 100%;
   min-height: 200px;
-  border: solid 1px orange;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -170,10 +168,19 @@ svg .b {
 button {
   width: 135px;
   height: 42px;
-  color: #FFFFFF;
-  border: solid 2px #FFFFFF;
+  color: white;
+  border: solid 2px white;
   background-color: transparent;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  cursor: pointer; }
+
+button:hover {
+  background-color: white;
+  color: #1C1C1C;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out; }
 
 .signup-button {
   margin: 0;
@@ -196,10 +203,13 @@ button {
   font-weight: 600;
   font-family: 'Montserrat', sans-serif; }
 
+.signup-button:hover, .send-button:hover {
+  color: #41D395;
+  border: solid 2px #41D395; }
+
 .send-button {
   margin: 0 auto;
-  margin-top: 40px;
-  margin-bottom: 33px;
+  margin-top: 30px;
   width: 160px;
   height: 48px;
   background-color: #41D395;
@@ -225,26 +235,28 @@ button {
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0 auto;
-  width: 100vw; }
+  width: 100%; }
 
 nav {
-  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   z-index: 100;
   width: 100%;
-  height: 72px;
-  background-color: #1C1C1C; }
+  height: 70px;
+  background-color: #1C1C1C;
+  margin: 0 auto; }
   nav .container {
-    margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px; }
+    height: 100%;
+    max-width: 1100px; }
 
 .menu {
   display: -webkit-box;
@@ -254,18 +266,52 @@ nav {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  border: solid 1px yellow; }
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  margin-top: 1.5em; }
   .menu ul {
     list-style: none;
     display: block;
-    text-align: right; }
+    text-align: right;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden; }
     .menu ul li {
+      color: white;
       display: inline-block;
-      padding-left: 2.5em; }
-    .menu ul li:first-of-type {
-      padding-left: 1em; }
+      padding-right: 2.5em;
+      padding-bottom: 1.5em;
+      position: relative;
+      margin: 0;
+      overflow-x: hidden;
+      -webkit-transition: -webkit-transform 0.4s;
+      transition: -webkit-transform 0.4s;
+      transition: transform 0.4s;
+      transition: transform 0.4s, -webkit-transform 0.4s; }
+      .menu ul li:after {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 10%;
+        background: #E27866;
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        -webkit-transition: 0.4s ease-in-out;
+        transition: 0.4s ease-in-out; }
+      .menu ul li:hover:after {
+        opacity: 1;
+        -webkit-transform: translateX(-38%);
+        transform: translateX(-38%); }
+    .menu ul li:last-of-type {
+      padding-right: 0; }
+    .menu ul:last-of-type:hover:after {
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%); }
   .menu a {
-    color: #F5F5F5;
+    color: white;
     text-decoration: none;
     font-size: 0.8em;
     opacity: 0.69; }
@@ -276,8 +322,10 @@ nav {
     transition: 0.2s ease-in-out; }
 
 .home {
-  height: 640px;
-  margin-top: 72px; }
+  height: 500px;
+  padding-top: 60px; }
+  .home .container {
+    z-index: 1; }
   .home .container .text-box {
     width: 63%;
     max-width: 650px;
@@ -446,12 +494,16 @@ input {
 
 .social {
   height: 105px;
-  background-color: #FFFFFF; }
+  background-color: #FFFFFF;
+  padding-top: 0;
+  padding-bottom: 0; }
   .social .text-box {
-    width: 30%; }
+    width: 45%; }
+    .social .text-box p {
+      color: #86878B; }
 
 .icons {
-  width: 55%;
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -487,7 +539,7 @@ input {
   background-image: url("app/images/features.jpg"); }
 
 .about {
-  height: 500px;
+  height: 350px;
   background-color: black;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -518,7 +570,8 @@ input {
         margin-right: 20px; }
 
 .logo {
-  width: 47%;
+  width: 40%;
+  min-height: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -529,14 +582,14 @@ input {
   -ms-flex-align: center;
   align-items: center;
   background-image: contain;
+  background-repeat: no-repeat;
   background-position: center center;
   padding-bottom: 50px; }
 
 #about-logo {
-  background-image: url("app/images/cheshire-county-hygiene-services-logo.svg"); }
+  background-image: url("app/images/logo-big.svg"); }
 
 .awsome, .reviews {
-  height: 500px;
   background-color: #FFFFFF; }
   .awsome h1, .reviews h1 {
     color: #1C1C1C;
@@ -544,16 +597,21 @@ input {
   .awsome p, .reviews p {
     color: #86878B; }
   .awsome .flex-vertical, .reviews .flex-vertical {
-    -ms-flex-pack: distribute;
-    justify-content: space-around; }
+    padding-top: 40px;
+    padding-bottom: 40px; }
 
-.awsome h1:after {
-  content: "";
-  background-color: #E27866; }
+.awsome {
+  min-height: 400px; }
+  .awsome .text-box {
+    max-width: 240px;
+    margin-bottom: 40px; }
+  .awsome h1:after {
+    content: "";
+    background-color: #E27866; }
 
 .circle {
-  width: 50px;
-  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border: solid 1px #E27866;
@@ -581,6 +639,8 @@ input {
 .pricing {
   min-height: 700px;
   background-color: #6696E2; }
+  .pricing .text-box {
+    margin-bottom: 40px; }
   .pricing h1 {
     text-align: center;
     width: 100%; }
@@ -658,7 +718,7 @@ input {
     text-transform: uppercase;
     text-align: center;
     margin-top: 10px;
-    font-size: 1em; }
+    font-size: 0.8em; }
 
 .card-bottom {
   width: 100%; }
@@ -666,28 +726,35 @@ input {
     list-style: none;
     text-align: center; }
     .card-bottom ul li {
-      font-size: 1em;
+      font-size: 0.8em;
       color: #86878B;
       text-transform: uppercase;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       padding-left: 10px;
       padding-right: 10px;
-      padding-top: 11px;
-      padding-bottom: 11px; }
+      padding-top: 0.5em;
+      padding-bottom: 0.5em; }
+      .card-bottom ul li:last-of-type {
+        padding-bottom: 1em; }
 
-.reviews h1 {
-  text-align: center;
-  width: 100%; }
-
-.reviews h1:after {
-  content: "";
-  background-color: #6696E2; }
+.reviews {
+  height: 500px; }
+  .reviews .text-box {
+    max-width: 260px; }
+  .reviews h1 {
+    text-align: center;
+    width: 100%; }
+  .reviews h1:after {
+    content: "";
+    background-color: #6696E2; }
 
 .contacts {
   width: 100%;
   min-height: 500px;
   background-color: #E27866; }
+  .contacts .text-box {
+    margin-bottom: 40px; }
   .contacts h1 {
     text-align: center; }
   .contacts h1:after {
@@ -695,12 +762,17 @@ input {
     background-color: #E27866; }
   .contacts p {
     color: white; }
+  .contacts form {
+    padding-top: 20px;
+    padding-bottom: 20px; }
+    .contacts form .subscription {
+      padding-top: 0; }
   .contacts .signup {
     min-height: 360px;
     margin-top: 33px; }
 
 footer {
-  height: 123px;
+  height: 100px;
   background-color: #1C1C1C;
   position: relative;
   display: -webkit-box;
@@ -711,11 +783,13 @@ footer {
   justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  padding-top: 0;
+  padding-bottom: 0; }
   footer p {
     font-size: 1.1em;
     color: white;
     opacity: 0.5;
     padding-top: 5px; }
-  footer .icons svg {
+  footer .icons a {
     opacity: 1; }
