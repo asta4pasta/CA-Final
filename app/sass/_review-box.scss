@@ -13,16 +13,7 @@
     border-radius: 8px;
     padding: 20px;
     position: relative;
-}
-
-.speech-bubble:after {
-    contain: '';
-    position: absolute;
-    top: 110%;
-    left: 20px;
-    box-sizing: border-box;
-    border: 8px solid transparent;
-    border-top: 8px solid $orange;    
+    margin-bottom: 19px;
     p {
         font-size: 0.8em;
         color: white;
@@ -30,6 +21,18 @@
         padding-bottom: 0;
     }
 }
+
+.speech-bubble:before {
+    content:"";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 30px;
+    top: 100%;
+    border: 8px solid transparent;
+    border-top: 8px solid $blue; 
+}
+       
 .review-bottom-box {
     width: 260px;
     display: flex;

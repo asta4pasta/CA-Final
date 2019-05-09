@@ -1,0 +1,57 @@
+.features {
+    width: 100%;
+    height: 500px;
+}
+
+.features::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom right, $orange, $blue);
+    opacity: 0.42;
+}
+
+#features {
+    background-image: url('app/images/features.jpg');
+}
+
+.tabs-block {
+    width: 100px;
+    height: 342px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: solid 1px powderblue;
+}
+
+button.tab {
+    width: 100px;
+    height: 100px;
+    background-color: #A37169;
+    border: 0;
+    text-transform: uppercase;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    outline: #A37169; 
+    span {
+        display: inline-block;
+        transform: rotate(-45deg);
+        font-size: 14px;
+        font-weight: 600;
+        color: white;
+        opacity: 0.5;
+    }
+    &:hover {
+        background-color: $orange;
+        opacity: 1;
+        cursor: pointer; 
+        // span {
+        //     opacity: 1;
+        //     transition: 0.2s ease-in-out;
+        // }
+    }
+}
+
+
