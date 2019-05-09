@@ -33,7 +33,6 @@ h2 {
     padding-bottom: 0.5em;
     &:after {
         content:'';
-        content: "";
         background-color: $orange;
         height: 2px;
         width: 200px;
