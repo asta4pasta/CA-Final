@@ -70,20 +70,17 @@ nav {
                 }
             &:hover:after {
                 opacity: 1;
-                transform: translateX(-38%);
+                transform: translateX(-40%);
             }
             &:last-of-type {
                 padding-right: 0;
                 &:hover {
                     &:after {
-                        transform: translateX(-50%); //cia susitvarkyti procentus
+                        transform: translateX(-1%); //cia susitvarkyti procentus
                     }
                 }
             }
         }
-        // li:last-of-type:hover:after {
-        //     transform: translateX(-100%);
-        // }
     }
 
     a {
@@ -102,19 +99,20 @@ nav {
 //HOME skiltis
 .home {
     height: 500px;
-    padding-top: 60px;
+    padding-top: 120px;
     .container {
         z-index: 1;
     }
     .container .text-box {
         width: 63%;
         max-width: 650px;
-        min-height: 425px;
+        min-height: 450px;
         display: flex;
         z-index: 2;
         h1 {
             text-align: left;
             width: 12em;
+            margin-bottom: 0;
         }
         h1::after {
             content: "";
@@ -125,7 +123,8 @@ nav {
         }
         h4 {
             opacity: 0.8;
-            color: $white;
+            color: white;
+            padding-bottom: 20px;
         }
     }
 }
@@ -150,7 +149,7 @@ nav {
 
 .signup { //konteineris
     width: 33%;
-    min-height: 425px;
+    min-height: 400px;
     min-width: 250px;
     background: $white;
     box-sizing: border-box;
@@ -271,9 +270,11 @@ nav {
 
 .awsome {
     min-height: 400px;
-    .text-box {
+    .wrap {
+        .text-box {
         max-width: 240px;
         margin-bottom: 40px;
+        }
     }
     h1:after {
         content: "";
