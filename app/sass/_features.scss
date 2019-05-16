@@ -3,10 +3,15 @@
     height: 500px;
     .container {
         z-index: 2;
+        // .swiper-container-interactive {
+        //     width: 950px;
+        //     height: 100%;
+        //     margin-left: 50px;
         .wrap {
-            max-width: 85%;
-            // border: solid 1px greenyellow;
+            width: 900px;
+            border: solid 1px greenyellow;
             align-items: center;
+            margin-left: 40px;
             .text-box {
                 max-width: 509px;
                 max-height: 342px;
@@ -24,6 +29,7 @@
         }
     }
 }
+
 
 //fono gradient overlay
 .features::before {
@@ -65,14 +71,15 @@ button.tab {
         font-weight: 600;
         color:#d1b8b4;
     }
-    &:hover {
-        background-color: $orange;
-        opacity: 1;
-        cursor: pointer; 
-        span {
-            color: white;
-            transition: 0.2s ease-in;
-        }
+}
+
+button.tab.active {
+    background-color: $orange;
+    opacity: 1;
+    cursor: pointer; 
+    span {
+        color: white;
+        transition: 0.2s ease-in;
     }
 }
 
