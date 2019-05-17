@@ -1,31 +1,88 @@
 .features {
     width: 100%;
-    height: 500px;
+    min-height: 500px;
+    @media screen and (max-width: $not-so-small) {
+        min-height: 900px;
+    }
     .container {
         z-index: 2;
-        // .swiper-container-interactive {
-        //     width: 950px;
-        //     height: 100%;
-        //     margin-left: 50px;
+        align-items: center;
+        justify-content: space-between;
+        width: 1100px;
+        @media screen and (max-width: $not-so-small) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-width: 320px;
+        }
         .wrap {
-            width: 900px;
-            border: solid 1px greenyellow;
+            max-width: 1000px;
+            min-width: 280px;
             align-items: center;
             margin-left: 40px;
+            @media screen and (max-width: $not-so-small) {
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                width: 500px;
+                margin-left: 0;
+            }
             .text-box {
-                max-width: 509px;
+                max-width: 500px;
+                // min-width: 280px;
                 max-height: 342px;
-                margin-right: 65px;
+                margin-right: 20px;
+                @media screen and (max-width: $not-so-small) {
+                    margin-right: 0;
+                }
+                @media screen and (max-width: $little) {
+                    min-width: 320px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
                 h1 {
                     text-align: left;
+                    @media screen and (max-width: $not-so-small) {
+                        max-width: 100%;
+                    }
                     &:after {
                         content: none;
                     }
                 }
                 p {
                     color: white;
+                    @media screen and (max-width: $not-so-small) {
+                        text-align: justify;
+                    }
                 }
             }
+        }
+    }
+    .swiper-container-interactive {
+        width: 1000px;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        @media screen and (max-width: $not-so-small) {
+            width: 60%;
+            min-height: 800px;
+        }
+        @media screen and (max-width: $tiny) {
+            min-width: 320px;
+        }
+    }
+    .swiper-wrapper {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .swiper-slide {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
         }
     }
 }
@@ -54,6 +111,14 @@
     flex-direction: column;
     justify-content: space-between;
     // border: solid 1px powderblue;
+    @media screen and (max-width: $not-so-small) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 350px;
+        height: 100px;
+        margin-top: 60px;
+    }
 }
 
 button.tab {
@@ -84,13 +149,18 @@ button.tab.active {
 }
 
 .image-block {
-    // border: 1px solid green;
     max-width: 362px;
     min-width: 260px;
     max-height: 366px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @media screen and (max-width: $not-so-small) {
+        margin-top: 40px;
+    }
+    @media screen and (max-width: $little) {
+        margin-top: 60px;
+    }
   }
   
   .image-block-top, .image-block-bottom {
@@ -146,6 +216,9 @@ button.tab.active {
     opacity: 1;
     cursor: pointer;
     transition: 0.2s ease-in-out;
+  }
+  .image-wrap:active {
+    box-shadow: 0px 0px 3px 3px rgba(102,150,226,0.5);
   }
 
   .image-block-bottom {

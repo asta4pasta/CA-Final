@@ -1,10 +1,15 @@
 .card { //konteineris Pricing kortele
     width: 30%;
     min-height: 400px; 
+    // min-width: 280px;
     display: flex;
     flex-direction: column;
     background-color: white;
     border-radius: 5px;
+    @media screen and (max-width: $little) {
+        margin-bottom: 20px;
+        width: 80%;
+    }
 }
 
 .card-top {
@@ -71,8 +76,8 @@
             box-sizing: border-box;
             padding-left: 10px;
             padding-right: 10px;
-            padding-top: 0.5em;
-            padding-bottom: 0.5em;
+            padding-top: 0.6em;
+            padding-bottom: 0.6em;
             &:last-of-type {
                 padding-bottom: 1em;
             }

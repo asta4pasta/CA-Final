@@ -1,5 +1,5 @@
 .section {
-    width: 100%;
+    width: 100vw;
     // border: solid 1px red;
     margin: 0 auto;
     padding-top: 60px;
@@ -9,6 +9,9 @@
     background-repeat: no-repeat;
     background-position: center center;
     position: relative;
+    @media screen and (min-width: $big) {
+        background-repeat: repeat;
+      }
 }
 
 .container {
@@ -26,7 +29,7 @@
 .flex-vertical {
     display: flex;
     flex-direction: column;
-    align-content: center;
+    align-items: center;
     justify-content: space-between;
 }
 

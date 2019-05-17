@@ -17,7 +17,7 @@ button:hover {
     transition: 0.2s ease-in-out;
 }
 
-.signup-button { //padaryti hover
+.signup-button { //Home skiltyje formoje
     margin: 0;
     padding: 0;
     width: 100%;
@@ -39,7 +39,7 @@ button:hover {
     border: solid 2px $green;
 }
 
-.send-button { //padaryti hover
+.send-button { //Contacts skiltyje
     margin: 0 auto;
     margin-top: 30px;
     width: 160px;
@@ -53,4 +53,8 @@ button:hover {
     font-size: 1em;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
+    @media screen and (max-width: $smaller) {
+        margin-left: 0;
+        margin-right: 0;
+      }
 }

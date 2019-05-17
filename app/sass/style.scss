@@ -4,15 +4,20 @@
 @import 'buttons';
 
 
+
 * {
     margin: 0;
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0 auto;
-    width: 100%;
+    width: 100vw;
 }
 
 //FOOTER'IS
@@ -31,6 +36,7 @@ nav {
     .container {
         height: 100%;
         max-width: 1100px;
+        padding-right: 0;
     }
 }
 
@@ -71,6 +77,9 @@ nav {
             &:hover:after {
                 opacity: 1;
                 transform: translateX(-40%);
+                @media screen and (max-width: $little) {
+                    transform: translateX(-50);
+                }
             }
             &:last-of-type {
                 padding-right: 0;
@@ -80,28 +89,61 @@ nav {
                     }
                 }
             }
+            @media screen and (max-width: $little) {
+                padding-right: 1.5em;
+            }
         }
     }
-
+    
+    // .responsive {
+    //     @media screen and (max-width: $tiny) {
+    //         position: relative;
+    //         a.icon {
+    //             position: absolute;
+    //             right: 0;
+    //             top: 0;
+    //         }
+    //         li {
+    //             display: block;
+    //             text-align: left;
+    //         }
+    //     }
+    // }
+    // .icon {
+    //         display: none;
+    //     }
     a {
         color: white;
         text-decoration: none;
         font-size: 0.8em;
         opacity: 0.69;
+        // .icon {
+        //     display: none;
+        //     @media screen and (max-width: $tiny) {
+        //         display: block;
+        //         float:right;
+        //     }
+        // }
     }
     a:hover {
         opacity: 1;
         cursor: pointer;
         transition: 0.2s ease-in-out;
     }
+    
 }
+
 
 //HOME skiltis
 .home {
-    height: 500px;
+    min-height: 500px;
     padding-top: 120px;
     .container {
         z-index: 1;
+        @media screen and (max-width: $little) {
+            width: 90%;
+            flex-direction: column;
+        }
     }
     .container .text-box {
         width: 63%;
@@ -109,22 +151,37 @@ nav {
         min-height: 450px;
         display: flex;
         z-index: 2;
+        padding-right: 20px;
+        @media screen and (max-width: $little) {
+            width: 80%;
+            padding-right: 0;
+            padding-left: 0;
+        }
         h1 {
             text-align: left;
             width: 12em;
             margin-bottom: 0;
+            @media screen and (max-width: $little) {
+                margin-top: 40px;
+
+            }
         }
         h1::after {
             content: "";
             margin: 0 0;
             margin-top: 0.6em;
             background-color: white;
-
+            @media screen and (max-width: $little) {
+                margin-bottom: 20px;
+            }
         }
         h4 {
             opacity: 0.8;
             color: white;
             padding-bottom: 20px;
+        }
+        @media screen and (max-width: $little) {
+            margin-bottom: 40px;
         }
     }
 }
@@ -150,12 +207,23 @@ nav {
 .signup { //konteineris
     width: 33%;
     min-height: 400px;
-    min-width: 250px;
+    // min-width: 280px;
     background: $white;
     box-sizing: border-box;
     border-radius: 5px;
     display: flex;
     z-index: 2;
+    @media screen and (max-width: $smaller) {
+        min-width: 286px;
+    }
+    .input {
+        color: #D8D8D8;
+    }
+    &:placeholder {
+        color: #D8D8D8;
+        opacity: 1;
+    }
+
 }
 
 #signup-header {
@@ -171,19 +239,30 @@ nav {
     border-radius: 5px 5px 0 0;
 }
 
-@import "forms"; //iskelta forms ir input (+radio) i _forms
+@import "forms";
 
 
 //Home skilties footeris section SOCIAL
 .social {
-    height: 105px;
+    min-height: 105px;
     background-color: $white;
     padding-top: 0;
     padding-bottom: 0;
-    .text-box {
-        width: 45%;
-        p {
-            color: #86878B;
+    .container {
+        @media screen and (max-width: $little) {
+            width: 90%;
+            flex-direction: column;
+        }
+        .text-box {
+            width: 45%;
+            @media screen and (max-width: $little) {
+                width: 80%;
+                margin-top: 40px;
+                margin-bottom: 20px;
+            }
+            p {
+                color: #86878B;
+            }
         }
     }
 }
@@ -202,6 +281,11 @@ nav {
     a:hover {
         opacity: 1;
     }
+    @media screen and (max-width: $little) {
+        width: 80%;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
 }
 
 //FEATURES skiltis
@@ -214,38 +298,62 @@ nav {
     min-height: 500px;
     background-color: black;
     display: flex;
-    .text-box {
-        width: 47%;
-        color: $white;
-        h2::after {
-            opacity: 1;
+    .container {
+        @media screen and (max-width: $small) {
+            width: 80%;
         }
-        p {
-            margin-bottom: 40px;
+        @media screen and (max-width: $little) {
+            flex-direction: column;
         }
         .text-box {
-            width: 100%;
-            margin-top: 10px;
-            display: flex;
-            align-items: flex-start;
-            .wrap {
-                min-height: 60px;
-                display: flex;
-                align-items: flex-start;
-                justify-content: flex-start;
-                margin-bottom: 35px;
-                .box {
-                    width: 100%;
-                    height: 100%;
-                    // justify-content: flex-start;
-                    h5 {
-                        margin-bottom: 5px;
-                    }
+            width: 42%;
+            color: $white;
+            @media screen and (max-width: $little) {
+                width: 90%;
+            }
+            h2 {
+                @media screen and (max-width: $small) {
+                    max-width: 100%;
+                    padding-right: 20px;
                 }
             }
-            
-            .circle {
-                margin-right: 20px;
+            h2::after {
+                opacity: 1;
+            }
+            p {
+                margin-bottom: 30px;
+                @media screen and (max-width: $small) {
+                    max-width: 100%;
+                }
+            }
+            .text-box {
+                width: 100%;
+                margin-top: 10px;
+                display: flex;
+                align-items: flex-start;
+                @media screen and (max-width: $little) {
+                    width: 100%;
+                }
+                p {
+                    padding-right: 20px;
+                }
+                .wrap {
+                    min-height: 60px;
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    .box {
+                        width: 100%;
+                        height: 100%;
+                        h5 {
+                            margin-bottom: 5px;
+                        }
+                    }
+                }
+                
+                .circle {
+                    margin-right: 20px;
+                }
             }
         }
     }
@@ -257,13 +365,16 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
     padding-bottom: 50px;
-}
-#about-logo {
-    background-image: url('app/images/logo-big.svg');
+    @media screen and (max-width: $little) {
+        width: 70%;
+        min-height: 100px;
+        padding-top: 20px;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 //AWSOME skiltis
@@ -279,12 +390,24 @@ nav {
     .flex-vertical {
         padding-top: 40px;
         padding-bottom: 40px;
+        @media screen and (max-width: $little) {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
     }
 }
 
 .awsome {
     min-height: 400px;
+    @media screen and (max-width: $little) {
+        padding-bottom: 40px;
+    }
     .wrap {
+        @media screen and (max-width: $little) {
+            width: 90%;
+            flex-direction: column;
+            align-items: center;
+        }
         .text-box {
         max-width: 240px;
         margin-bottom: 40px;
@@ -324,11 +447,15 @@ nav {
     min-height: 700px;
     background-color: $blue;
     .text-box {
-        margin-bottom: 40px;
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
     h1 {
         text-align: center;
         width: 100%;
+        @media screen and (max-width: $little) {
+            padding-top: 20px;
+        }
     }
     h1:after {
         content: "";
@@ -339,24 +466,36 @@ nav {
     }
     .wrap {
         align-items: flex-end;
+        @media screen and (max-width: $little) {
+            width: 90%;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 }
 @import 'card';
 
 //REVIEWS skiltis
 .reviews {
-    height: 590px;
+    min-height: 590px;
     }
     h1 {
         text-align: center;
         width: 100%;
+        word-break: normal;
+        @media screen and (max-width: $small) {
+            max-width: 280px;
+        }
+        @media screen and (max-width: $little) {
+            padding-top: 20px;
+        }
     }
     h1:after {
         content: "";
         background-color: $blue;
     }
     .text-box.centered {
-        margin-bottom: 60px;
+        margin-bottom: 50px;
     }
     .wrap {
         align-items: flex-end;
@@ -368,11 +507,23 @@ nav {
  @import 'review-box'; //su speech-bubblais
 
  .swiper-container {
-    width: 1100px;
+    width: 1000px;
     height: 400px;
+    // padding-left: 60px;
+    display: flex;
+    justify-content: center;
+    @media screen and (max-width: 1050px) {
+        max-width: 600px;
+        height: 100%;
+    }
+    @media screen and (max-width: $little) {
+        max-width: 300px;
+        height: 100%;
+    }
     .swiper-wrapper {
         display: flex;
-        align-items: flex-end;
+        align-items: center;
+        justify-content: space-between;
         .swiper-slide {
             display: flex;
             align-items: flex-end;
@@ -403,6 +554,9 @@ nav {
     }
     h1 {
         text-align: center;
+        @media screen and (max-width: $little) {
+            padding-top: 20px;
+        }
     }
     h1:after {
         content: "";
@@ -414,6 +568,10 @@ nav {
     form {
         padding-top: 20px;
         padding-bottom: 20px;
+        @media screen and (max-width: $smaller) {
+            padding-left: 10px;
+            padding-right: 10px;
+          }
         .subscription {
             padding-top: 0;
         }
@@ -425,7 +583,7 @@ nav {
 } 
 
 footer {
-    height: 100px;
+    min-height: 100px;
     background-color: $black;
     position: relative;
     display: flex;
@@ -433,11 +591,28 @@ footer {
     align-items: center;
     padding-top: 0;
     padding-bottom: 0;
+    .container {
+        @media screen and (max-width: $little) {
+            width: 90%;
+            flex-direction: column;
+        }
+    }
+
     p {
-        font-size: 1.1em;
+        font-size: 0.9em;
         color: white;
         opacity: 0.5;
         padding-top: 5px;
+        @media screen and (max-width: $little) {
+            margin-bottom: 20px;
+            font-size: 0.7em;
+        }
+    }
+    .icons {
+        @media screen and (max-width: $little) {
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
     }
     .icons a {
         opacity: 1;

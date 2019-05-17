@@ -6,7 +6,7 @@
 }
 
 .speech-bubble {
-    width: 260px;
+    width: 100%;
     min-height: 50px;
     background-color: $blue;
     box-sizing: border-box;
@@ -21,6 +21,12 @@
         padding-bottom: 0;
     }
 }
+
+@media screen and (max-width: 1050px) {
+    .review-box {
+        min-width: 200px;
+    }   
+  }
 
 .speech-bubble:before {
     content:"";

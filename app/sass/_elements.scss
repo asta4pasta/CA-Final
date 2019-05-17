@@ -4,7 +4,7 @@ h1, h2, h3, h4, h5 {
 
 h1 {
     //padaryti after'i - linija apacioj
-    font-size: 2em; //buvo 2em;
+    font-size: 1.9em;
     color: $white;
     word-wrap: break-word;
     line-height: 1.3;
@@ -53,12 +53,13 @@ h4 {
 }
 
 h5 {
-    font-size: 0.7em;
+    font-size: 0.8em;
 }
 
 p {
-    font-size: 0.7em;
+    font-size: 0.8em;
     padding-bottom: 10px;
+    line-height: 1.5;
 }
 
 svg {
