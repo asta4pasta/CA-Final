@@ -1,0 +1,45 @@
+//skiltis SOCIAL Media
+.social {
+    min-height: 105px;
+    background-color: $white;
+    padding-top: 0;
+    padding-bottom: 0;
+    .container {
+        @media screen and (max-width: $little) {
+            width: 90%;
+            flex-direction: column;
+        }
+        .text-box {
+            width: 45%;
+            @media screen and (max-width: $little) {
+                width: 80%;
+                margin-top: 40px;
+                margin-bottom: 20px;
+            }
+            p {
+                color: #86878B;
+            }
+        }
+    }
+}
+
+.icons {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    svg {
+        fill:#e27866;
+    }
+    a {
+        opacity: 0.63;
+    }
+    a:hover {
+        opacity: 1;
+    }
+    @media screen and (max-width: $little) {
+        width: 80%;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+}

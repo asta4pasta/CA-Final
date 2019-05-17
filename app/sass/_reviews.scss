@@ -1,0 +1,67 @@
+//REVIEWS skiltis
+.reviews {
+    min-height: 590px;
+    }
+    h1 {
+        text-align: center;
+        width: 100%;
+        word-break: normal;
+        @media screen and (max-width: $small) {
+            max-width: 280px;
+        }
+        @media screen and (max-width: $little) {
+            padding-top: 20px;
+        }
+    }
+    h1:after {
+        content: "";
+        background-color: $blue;
+    }
+    .text-box.centered {
+        margin-bottom: 50px;
+    }
+    .wrap {
+        align-items: flex-end;
+        justify-content: space-around;
+        .text-box {
+            max-width: 260px;
+    }
+}
+ @import 'review-box'; //su speech-bubblais
+
+ .swiper-container {
+    width: 1000px;
+    height: 400px;
+    // padding-left: 60px;
+    display: flex;
+    justify-content: center;
+    @media screen and (max-width: 1050px) {
+        max-width: 600px;
+        height: 100%;
+    }
+    @media screen and (max-width: $little) {
+        max-width: 300px;
+        height: 100%;
+    }
+    .swiper-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .swiper-slide {
+            display: flex;
+            align-items: flex-end;
+            box-sizing: border-box;
+            padding-bottom: 85px;
+        }
+    }
+}
+.swiper-pagination {
+    margin-top: 86px;
+}
+.swiper-pagination-bullet {
+    background: transparent;
+    border: 1px solid $orange;
+}
+.swiper-pagination-bullet-active {
+    background: $orange;
+}

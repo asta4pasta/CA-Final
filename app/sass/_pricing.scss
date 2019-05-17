@@ -1,0 +1,32 @@
+//PRICING skiltis
+.pricing {
+    min-height: 700px;
+    background-color: $blue;
+    .text-box {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    h1 {
+        text-align: center;
+        width: 100%;
+        @media screen and (max-width: $little) {
+            padding-top: 20px;
+        }
+    }
+    h1:after {
+        content: "";
+        background-color: $green;
+    }
+    .flex-vertical {
+        justify-content: space-around;
+    }
+    .wrap {
+        align-items: flex-end;
+        @media screen and (max-width: $little) {
+            width: 90%;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+@import 'card';

@@ -1,5 +1,4 @@
 //Home skiltis - Download buttonas
-
 button {
     width: 135px;
     height: 42px;
@@ -17,7 +16,8 @@ button:hover {
     transition: 0.2s ease-in-out;
 }
 
-.signup-button { //Home skiltyje formoje
+//Home skiltyje formoje
+.signup-button { 
     margin: 0;
     padding: 0;
     width: 100%;
@@ -39,7 +39,8 @@ button:hover {
     border: solid 2px $green;
 }
 
-.send-button { //Contacts skiltyje
+//Contacts skiltyje
+.send-button { 
     margin: 0 auto;
     margin-top: 30px;
     width: 160px;

@@ -1,0 +1,38 @@
+//Footeris
+
+footer {
+    min-height: 100px;
+    background-color: $black;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+    .container {
+        @media screen and (max-width: $little) {
+            width: 90%;
+            flex-direction: column;
+        }
+    }
+
+    p {
+        font-size: 0.9em;
+        color: white;
+        opacity: 0.5;
+        padding-top: 5px;
+        @media screen and (max-width: $little) {
+            margin-bottom: 20px;
+            font-size: 0.7em;
+        }
+    }
+    .icons {
+        @media screen and (max-width: $little) {
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+    }
+    .icons a {
+        opacity: 1;
+    }
+}

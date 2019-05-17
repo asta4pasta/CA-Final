@@ -1,0 +1,37 @@
+//CONTACTS skiltis
+.contacts {
+    width: 100%;
+    min-height: 500px;
+    background-color: $orange;
+    .text-box {
+        margin-bottom: 40px;
+    }
+    h1 {
+        text-align: center;
+        @media screen and (max-width: $little) {
+            padding-top: 20px;
+        }
+    }
+    h1:after {
+        content: "";
+        background-color: $orange;
+    }
+    p {
+        color: white;
+    }
+    form {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        @media screen and (max-width: $smaller) {
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+        .subscription {
+            padding-top: 0;
+        }
+    }
+    .signup {
+        min-height: 360px;
+        margin-top: 33px;
+    }
+}
